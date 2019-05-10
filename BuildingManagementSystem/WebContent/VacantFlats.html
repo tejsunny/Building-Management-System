@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>SONA VISTAAS.COM</h1>
+<hr>
+
+<h2>PORTFOLIO</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <h2><a href = "VacancyServlet"><button>VacantFlats</button></a></h2>
+  <button class="btn" onclick="filterSelection('cars')"> Facilities</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+  <div class="column nature">
+    <div class="content">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToiqK9VImS1XnbjuSLlHQX-tdiXYKES6IlMNidTehfHrZEegANcA" alt="Mountains" style="width:100%">
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqHlq2JHG9BPA2BALYW-yvvjst3Fc2fblJG1BsZ_AFEFjcaM1" alt="Lights" style="width:100%">
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="http://www.sonavistaasbannerghatta.co.in/wp-content/uploads/2018/12/sona-vistaas-gallery-6-768x432.jpg" alt="Nature" style="width:100%">
+      
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+    <img src="https://media.tenor.com/images/a5307faa5f60641954f607de9d49ef10/tenor.gif" alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+      <h4>Badminton</h4>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://media0.giphy.com/media/3DHZmtCO06jhUAEFkd/200w.webp?cid=790b76115ccee9bd58456f77413ef6d5&rid=200w.webp"alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+      <h4>Cricket</h4>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://media2.giphy.com/media/Z54VPIMUNTnyg/200w.webp?cid=790b76115cceeafb516d664a77c3097f&rid=200w.webp"alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+      <h4>Basket Ball</h4>
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+    <img src="https://media3.giphy.com/media/g0HisFAsIh8IbNWy2g/200w.webp?cid=790b76115cceeb73636f506b4d854650&rid=200w.webp"alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+      <h4>Table Tennis</h4>
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+       <img src="https://media.tenor.com/images/4157259f720ab7abbdb08aaa0fb7ed25/tenor.gif"alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+      <h4>Gym</h4>
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+      <img src="https://media3.giphy.com/media/26uffzhyH0QgCSZuo/200.webp?cid=790b76115cceec563038384e6f51b1c6&rid=200.webp"alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+     <h4>Theatre</h4>
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+        <img src="https://media1.giphy.com/media/xT9IgMebNBaqnxe22Y/200w.webp?cid=790b76115cceecbd51536b6651739858&rid=200w.webp"alt="HTML tutorial" style="width:300px;height:300px;border:0"></a>
+      <h4>Skating</h4>
+    </div>
+  </div>
+    <div class="column cars">
+    <div class="content">
+       <img src="https://media2.giphy.com/media/opfdy17taUtNK/200w.webp?cid=790b76115cceeeee33316a304d3d874e&rid=200w.webp"alt="HTML tutorial" style="width:300px;height:300px;border:0">
+      <h4>Aerobics</h4>
+    </div>
+  </div>
+  
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
